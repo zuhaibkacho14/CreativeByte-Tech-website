@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreativeByte - Digital Marketing Agency</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">CreativeByte</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="ToggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<section id="home" class="hero">
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="images/hero_vedio.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Background Image Slideshow -->
+  <!-- <div class="background-slideshow">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('images/sch.png');"></div>
+      <div class="slide" style="background-image: url('images/lib.png');"></div>
+      <div class="slide" style="background-image: url('images/rncy.png');"></div>
+    </div> -->
+    <!-- Three-Dotted Button -->
+    <div class="slideshow-controls">
+      <button class="slide-btn active" data-slide="0"></button>
+      <button class="slide-btn" data-slide="1"></button>
+      <button class="slide-btn" data-slide="2"></button>
+    </div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1>Transform Your Business with CreativeByte</h1>
+    <p>We deliver innovative digital marketing solutions tailored to your needs.</p>
+    <a href="#services" class="cta-button">Explore Services</a>
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <i class="fas fa-search"></i>
+        <h3>SEO Optimization</h3>
+        <p>Boost your website's visibility on search engines.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-pencil-ruler"></i>
+        <h3>UI/UX Design</h3>
+        <p>Create seamless and engaging user experiences.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>Software Development</h3>
+        <p>Build scalable and robust software solutions.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-video"></i>
+        <h3>Video Editing</h3>
+        <p>Produce high-quality video content for your brand.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Build scalable and robust websites.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-pencil-ruler"></i>
+        <h3>Content Marketing</h3>
+        <p>Blog writing, article marketing, etc</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Our Projects</h2>
+    <div class="project-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="images/mthome.png" alt="MT-EMS">
+        <h3>MT-Employee Management System</h3>
+        <p>Mustaghis Tech employee mangaement system.</p>
+        <button class="view-details" data-project="1">View Details</button>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="images/lib.png" alt="Lib-MS">
+        <h3>Library Management System</h3>
+        <p>You can barrow and returns books.</p>
+        <button class="view-details" data-project="2">View Details</button>
+      </div>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="images/anju.png" alt="Anju Salon">
+        <h3>Anjilee Beauty Salon</h3>
+        <p>Relax, Refresh & Rejuvenate. Your Perfect look starts here. <br>
+          Dynamic and user-friendly website built with ASP.NET Framework
+        </p>
+        <button class="view-details" data-project="3">View Details</button>
+      </div>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img src="images/sch.png" alt="School-MS">
+        <h3>School Management System</h3>
+        <p>School mangaement system. Add, Delete, Update records of student, coureses and teachers</p>
+        <button class="view-details" data-project="4">View Details</button>
+      </div>
+      <!-- Project 5 -->
+      <div class="project-card">
+        <img src="images/rncy.png" alt="currency_conversion">
+        <h3>Currency Conversion</h3>
+        <p>Built a basic Currency conversion .</p>
+        <button class="view-details" data-project="5">View Details</button>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Project Details Popup -->
+  <div id="project-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <h2 id="popup-title">Project Title</h2>
+      <img id="popup-image" src="" alt="Project Image">
+      <p id="popup-description">Project description goes here.</p>
+      <h3>Technologies Used</h3>
+      <ul id="popup-technologies"></ul>
+      <h3>Tools Used</h3>
+      <ul id="popup-tools"></ul>
+      <h3>Project Video</h3>
+      <iframe id="popup-video" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- About Section -->
+<section id="about" class="about">
+  <div class="about-container">
+    <!-- Title on Top -->
+    <h2 class="about-title">About Us</h2>
+    <!-- Left and Right Portions -->
+    <div class="about-content">
+      <!-- Left Portion: Logo with Animation -->
+      <div class="about-left">
+        <div class="logo-animation">
+          <img src="images/aboutus.jpg" alt="CreativeByte Logo">
+        </div>
+      </div>
+      <!-- Right Portion: Content with Unique Background -->
+      <div class="about-right">
+        <p>CreativeByte is a leading digital marketing agency dedicated to helping businesses grow online. Our team of experts specializes in SEO, UI/UX design, software development, and video editing. We are committed to delivering innovative solutions that drive results.</p>
+        <a href="#" class="cta-button">More About</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+  <h2>What Our Clients Say</h2>
+  <p class="subtitle">Real feedback from our happy clients</p>
+
+  <div class="testimonial-container">
+      <div class="testimonial-card active">
+          <img src="images/ceo-sadiq-mt.png" alt="John Doe">
+          <p class="quote">"This service exceeded my expectations! The team was professional and efficient."</p>
+          <h3>Sadiq Mustaghis</h3>
+          <span class="designation">CEO, The Mustaghis Tech</span>
+      </div>
+      <div class="testimonial-card">
+          <img src="images/anju.png" alt="Sarah Khan">
+          <p class="quote">"Highly satisfied with the quality of work. Great experience!"</p>
+          <h3>Anjilee </h3>
+          <span class="designation">Owner, Anjilee Salon</span>
+      </div>
+      <div class="testimonial-card">
+          <img src="images/passport.jpg" alt="Michael Brown">
+          <p class="quote">"Exceptional customer support and timely delivery. Definitely recommended!"</p>
+          <h3>Shahzad Hassan</h3>
+          <span class="designation">BSCS Student, 7th Semester</span>
+      </div>
+  </div>
+
+  <div class="controls">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+  </div>
+</section>
+   <!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2 class="contact-title">Contact Us</h2>
+  <div class="contact-container">
+   
+
+    <!-- Right Side: Contact Details and Form -->
+    <div class="contact-right">
+      <!-- Contact Details in Horizontal Blocks -->
+      <div class="contact-details">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Address</h3>
+          <p>Dera Gujran, Lahore Punjab, Pakistan</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>creativebytes.hub@gmail.com</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <h3>Phone</h3>
+          <p>+92 311 4069952</p>
+        </div>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="social-media">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Services You're Interested In:</label>
+            <div class="checkbox-group">
+              <label class="checkbox-button">
+                <input type="checkbox" name="services" value="SEO">
+                <span>SEO Optimization</span>
+              </label>
+              <label class="checkbox-button">
+                <input type="checkbox" name="services" value="UI/UX">
+                <span>UI/UX Design</span>
+              </label>
+              <label class="checkbox-button">
+                <input type="checkbox" name="services" value="Software">
+                <span>Software Development</span>
+              </label>
+              <label class="checkbox-button">
+                <input type="checkbox" name="services" value="Video">
+                <span>Video Editing</span>
+              </label>
+              <label class="checkbox-button">
+                <input type="checkbox" name="services" value="Video">
+                <span>Web Development</span>
+              </label>
+              <label class="checkbox-button">
+                <input type="checkbox" name="services" value="Video">
+                <span>Content Marketing</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+          <!-- Left Side: Map -->
+    <div class="contact-left">
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212.41716290936495!2d74.43629175424576!3d31.58796986265615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391911c5f5c48075%3A0xab2104262dd00b5d!2sCreativeBytes%20Tech!5e0!3m2!1sen!2s!4v1739297141221!5m2!1sen!2s" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+        </iframe>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 CreativeByte. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
